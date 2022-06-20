@@ -31,13 +31,12 @@ function start() {
 }
 
 function playTurn(coordX, coordY) {
-  grelha[coordX][coordY] = "X";
-  turno++;
   if (turno % 2 == 0) {
-    return "O";
+    grelha[coordX][coordY] = "O";
   } else {
-    return "X";
+    grelha[coordX][coordY] = "X";
   }
+  turno++;
 }
 
 playTurn(2, 2);
