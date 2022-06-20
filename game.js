@@ -35,6 +35,12 @@
    2 - Quando todos os quadrados são preenchidos sem os 3 símbolos (X ou O) em simultâneo;
    3 - Quando é accionado o botão "reset"; */
 
+let grelha = [
+  [, , ,],
+  [, , ,],
+  [, ,],
+];
+
 function start() {
   return [
     [, , ,],
