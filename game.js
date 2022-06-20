@@ -33,6 +33,11 @@ function start() {
 function playTurn(coordX, coordY) {
   grelha[coordX][coordY] = "X";
   turno++;
+  if (turno % 2 == 0) {
+    return "O";
+  } else {
+    return "X";
+  }
 }
 
 playTurn(2, 2);
