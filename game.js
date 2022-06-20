@@ -33,4 +33,4 @@
 /* O jogo termina nas seguintes condições:
    1 - Quando qualquer um dos jogadores preenche os 3 quadrados (com X ou O) em qualquer uma das direcções;
    2 - Quando todos os quadrados são preenchidos sem os 3 símbolos (X ou O) em simultâneo;
-   3 - Quando é accionado o botão "reset"; /*
+   3 - Quando é accionado o botão "reset"; */
