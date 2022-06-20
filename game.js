@@ -11,7 +11,15 @@
 // REGRA 1 //
 
 /* Será criado um array multidimensional composto por 3 arrays. 
-   Cada array equivalerá a uma linha da grelha */
+   Cada array equivalerá a uma linha da grelha 
+    
+  [
+    [ , , ], // 1ª linha
+    [ , , ], // 2ª linha
+    [ , , ], // 3ª linha
+  ] 
+   
+*/
 
 // REGRA 2 //
 
