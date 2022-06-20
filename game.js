@@ -8,18 +8,24 @@
 
 3 - o primeiro a completar 3 em linha ganha */
 
-// REGRA 1 //
+let grelha = [
+  [, ,],
+  [, ,],
+  [, ,],
+];
 
+// REGRA 1 //
 /* Será criado um array multidimensional composto por 3 arrays. 
-   Cada array equivalerá a uma linha da grelha 
-    
-  [
-    [ , , ], // 1ª linha
-    [ , , ], // 2ª linha
-    [ , , ], // 3ª linha
-  ] 
-   
+   Cada array equivalerá a uma linha da grelha
 */
+function start() {
+  // reset the grid
+  grelha = [
+    [, ,],
+    [, ,],
+    [, ,],
+  ];
+}
 
 // REGRA 2 //
 
@@ -34,19 +40,3 @@
    1 - Quando qualquer um dos jogadores preenche os 3 quadrados (com X ou O) em qualquer uma das direcções;
    2 - Quando todos os quadrados são preenchidos sem os 3 símbolos (X ou O) em simultâneo;
    3 - Quando é accionado o botão "reset"; */
-
-let grelha = [
-  [, , ,],
-  [, , ,],
-  [, ,],
-];
-
-function start() {
-  return [
-    [, , ,],
-    [, , ,],
-    [, , ,],
-  ];
-}
-
-console.log(start());
