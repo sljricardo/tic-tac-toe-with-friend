@@ -4,39 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
+    <style>
+      .col {
+        padding: 50px;
+        border: 1px solid gray;
+      }
+    </style>
   </head>
   <body>
+    <!-- Reset Game -->
+    <button onclick="reset()">Reset</button>
+    <!-- Game turn information -->
+    <center>Player <span id="turn">1</span></center>
+    <!-- Game Board -->
     <table style="border: 1px solid gray; margin: auto">
-      <tbody>
+      <tbody id="tic-tac-toe">
         <tr>
-          <td style="padding: 50px; border: 1px solid gray"></td>
-          <td style="padding: 50px; border: 1px solid gray"></td>
-          <td style="padding: 50px; border: 1px solid gray"></td>
+          <td class="col" onclick="setPosition(this, 0,0)"></td>
+          <td class="col" onclick="setPosition(this, 0,1)"></td>
+          <td class="col" onclick="setPosition(this, 0,2)"></td>
         </tr>
         <tr>
-          <td style="padding: 50px; border: 1px solid gray"></td>
-          <td style="padding: 50px; border: 1px solid gray"></td>
-          <td style="padding: 50px; border: 1px solid gray"></td>
+          <td class="col" onclick="setPosition(this, 1,0)"></td>
+          <td class="col" onclick="setPosition(this, 1,1)"></td>
+          <td class="col" onclick="setPosition(this, 1,2)"></td>
         </tr>
         <tr>
-          <td style="padding: 50px; border: 1px solid gray"></td>
-          <td style="padding: 50px; border: 1px solid gray"></td>
-          <td style="padding: 50px; border: 1px solid gray"></td>
+          <td class="col" onclick="setPosition(this, 2,0)"></td>
+          <td class="col" onclick="setPosition(this, 2,1)"></td>
+          <td class="col" onclick="setPosition(this, 2,2)"></td>
         </tr>
       </tbody>
     </table>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
     <script src="game.js"></script>
+    <script>
+      let play = 1;
+
+      function reset() {
+        window.location.reload(false);
+      }
+
+      function setPosition(el, x, y) {
+        if (!el.innerHTML) {
+          document.querySelector("#turn").innerHTML = play % 2 ? 2 : 1;
+          el.innerHTML = play % 2 ? "X" : "O";
+          play++;
+        }
+      }
+
+      function isOver() {
+        const isGameEnd = false;
+        if (isGameEnd) {
+          reset();
+        }
+      }
+    </script>
   </body>
 </html>
