@@ -15,6 +15,8 @@ let grelha = [
   [, ,],
 ];
 
+let turno = 1;
+
 // REGRA 1 //
 /* Será criado um array multidimensional composto por 3 arrays. 
    Cada array equivalerá a uma linha da grelha
@@ -30,6 +32,7 @@ function start() {
 
 function playTurn(coordX, coordY) {
   grelha[coordX][coordY] = "X";
+  turno++;
 }
 
 playTurn(2, 2);
