@@ -28,6 +28,12 @@ function start() {
   ];
 }
 
+function playTurn(coordX, coordY) {
+  grelha[coordX][coordY] = "X";
+}
+
+playTurn(2, 2);
+
 // REGRA 2 //
 
 /* Cada jogada é intercalada (começa o jogador 1 e de seguida joga o jogador 2).
