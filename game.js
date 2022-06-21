@@ -41,6 +41,32 @@ function playTurn(coordX, coordY) {
 
 playTurn(2, 2);
 
+
+function checkGrid()
+  for (let i = 0; i < 3; i++ ) {
+
+// Validate horizontal lines
+  if (grelha[i][0] == grelha[i][1] && grelha[i][1] == grelha[i][2]) {
+    return true
+  }
+
+// Validate vertical lines
+
+  if (grelha[0][i] == grelha[1][i] && grelha[1][i] == grelha[2][i]) {
+    return true
+  }
+
+  // Validate diagonal lines
+
+ 
+  }
+  if (grelha[0][0] == grelha[1][1] && grelha[1][1] == grelha[2][2]) {
+    return true
+  }
+  if (grelha[0][2] == grelha[1][1] && grelha[1][1] == grelha[2][0]) {
+    return true
+  }
+
 // REGRA 2 //
 
 /* Cada jogada é intercalada (começa o jogador 1 e de seguida joga o jogador 2).
